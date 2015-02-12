@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.kzwang</groupId>
     <artifactId>elasticsearch-image</artifactId>
-    <version>1.3.0-SNAPSHOT</version>
+    <version>1.4.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>Image Plugin for ElasticSearch</description>
     <url>http://github.com/kzwang/elasticsearch-image</url>
@@ -38,8 +38,8 @@
     </parent>
 
     <properties>
-        <elasticsearch.version>1.3.2</elasticsearch.version>
-        <lucene.version>4.9.0</lucene.version>
+        <elasticsearch.version>1.4.2</elasticsearch.version>
+	<lucene.version>4.9.2</lucene.version>
         <tests.jvms>1</tests.jvms>
         <tests.shuffle>true</tests.shuffle>
         <tests.output>onerror</tests.output>
@@ -50,7 +50,8 @@
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-test-framework</artifactId>
-            <version>${lucene.version}</version>
+	    <!--<version>${lucene.version}</version>-->
+            <version>4.10.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -140,12 +141,12 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
-                <configuration>
+		<configuration>
                     <source>1.7</source>
                     <target>1.7</target>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>com.carrotsearch.randomizedtesting</groupId>
                 <artifactId>junit4-maven-plugin</artifactId>
                 <version>2.0.15</version>
@@ -191,7 +192,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
             <plugin>
                 <!-- we skip surefire to work with randomized testing above -->
                 <groupId>org.apache.maven.plugins</groupId>
